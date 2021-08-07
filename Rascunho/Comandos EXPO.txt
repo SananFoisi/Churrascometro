@@ -1,0 +1,11 @@
+Criar novo aplicativo:
+expo init nome_do_app
+Abrir pasta do aplicativo:
+cd nome_do_app
+Inicializar aplicativo:
+expo start
+
+Comandos EXPO (apk - ipa)
+
+npm install -g expo-cli
+expo build:android or expo build:ios

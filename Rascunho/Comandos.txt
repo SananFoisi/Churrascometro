@@ -1,0 +1,24 @@
+Set-ExecutionPolicy AllSigned
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+
+choco install yarn
+choco install python2
+choco install jdk8
+choco install nodejs.install
+
+# choco -v
+# yarn
+# node -v
+
+npm install -g react-native-cli
+
+# react-native -v
+
+https://developer.android.com/studio#downloads
+C:>Usuarios>USER>appdata>local>Android>Sdk>tools
+
+VARIAVEIS DE AMBIENTE DO WINDOWS
+
+Propriedades>Configurações Avançadas de Sistema>Avançado>Variáveis de Ambiente>PATCH>Novo>Adicionar o Endereço tools
+
+yarn global add expo-cli
