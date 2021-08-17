@@ -2,9 +2,11 @@ import { StatusBar } from 'expo-status-bar';
 import React, { Component } from 'react';
 import {
   StyleSheet, Text, TextInput, View, ImageBackground, Image,
-  TouchableOpacity, Button, ScrollView, Linking, SafeAreaView
+  TouchableOpacity, Button, ScrollView, Linking, SafeAreaView,
+  Alert
 } from 'react-native';
 import { DataTable } from 'react-native-paper';
+import { Constants } from 'expo';
 // import { Col, Row, Grid } from 'react-native-easy-grid';
 
 export default class App extends Component {
@@ -234,9 +236,46 @@ export default class App extends Component {
             </View>
 
 
+            <View style={styles.container4}>
+
+              <TouchableOpacity
+                style={styles.button4}
+                onPress={this._showAlert}>
+                <Text style={{ fontSize: 32, color: 'white' }}>Show Alert!</Text>
+              </TouchableOpacity>
+
+            </View>
+
+
+
           </View>
         </View>
       </ScrollView >
+    );
+  }
+
+  _showAlert = () => {
+    Alert.alert(
+      this.state.nome,
+      "Seu Churarsco ira precisar de:",
+
+      // this.state.resTotal.toFixed(2), " " , this.state.resTextoT, "Totais",
+      // this.state.resCB.toFixed(2), " " , this.state.resTextoB, "de Carne Bovina",
+      // this.state.resCS.toFixed(2), " " , this.state.resTextoS, "de Carne Suina",
+      // this.state.resCF.toFixed(2), " " , this.state.resTextoF, "de Carne Frango",
+
+     
+
+      [
+        {
+          text: "Cancel",
+          onPress: () => console.log("Cancel Pressed"),
+          style: "cancel"
+        },
+        {
+          text: "OK", onPress: () => console.log("OK Pressed")
+        }
+      ]
     );
   }
 }
@@ -244,6 +283,25 @@ export default class App extends Component {
 
 //edits style 
 const styles = StyleSheet.create({
+
+  container4: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    //paddingTop: Constants.statusBarHeight,
+    backgroundColor: '#ecf0f1',
+  },
+  button4: {
+    margin: 24,
+    padding: 40,
+    borderRadius: 15,
+    borderWidth: 1,
+    borderColor: "transparent",
+    fontWeight: 'bold',
+    textAlign: 'center',
+    color: '#34495e',
+    backgroundColor: '#ff6666'
+  },
 
   resultNOME: {
 
