@@ -137,7 +137,7 @@ export default class App extends Component {
             Calcule seu Churrasco!!
           </Text>
           <View style={styles.blocoCalc}>
-            <TextInput style={styles.form} placeholder='Nome' textContentType='name' onChangeText={(nome) => { this.setState({ nome }) }} />
+            <TextInput style={styles.form} placeholder='Nome' textContentType='name'  onChangeText={(nome) => { this.setState({ nome }) }} />
             <TextInput style={styles.form} placeholder='Qtd. Homens' keyboardType='numeric' onChangeText={(qtdH) => { this.setState({ qtdH }) }} />
             <TextInput style={styles.form} placeholder='Qtd. Mulheres' keyboardType='numeric' onChangeText={(qtdM) => { this.setState({ qtdM }) }} />
             {/* <TextInput style={styles.form} placeholder='kg em carne bovina' keyboardType='numbers-and-punctuation' onChangeText={(cB) => (this.setState({ cB }))} />
@@ -264,7 +264,7 @@ export default class App extends Component {
       // this.state.resCS.toFixed(2), " " , this.state.resTextoS, "de Carne Suina",
       // this.state.resCF.toFixed(2), " " , this.state.resTextoF, "de Carne Frango",
 
-     
+
 
       [
         {
@@ -356,6 +356,7 @@ const styles = StyleSheet.create({
     margin: 10,
   },
   form: {
+    
     textAlign: 'center',
     margin: 10,
     width: 300,
